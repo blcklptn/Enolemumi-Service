@@ -5,3 +5,8 @@
     poetry install --sync
 ```
 
+# Architecture:
+    Docker-Compose:
+        - Postgresql database
+        - PgAdmin
+    

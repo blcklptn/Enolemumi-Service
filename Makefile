@@ -1,5 +1,5 @@
 startDocker:
-	docker-compose --env-file .env
+	docker-compose --env-file .env up
 
 startBackend:
 	poetry run python3 SourceFiles/enolemumiProject/manage.py runserver
