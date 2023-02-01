@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<link rel="stylesheet" href="{% static 'slick.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+	<script src="{% static 'js/common.js' %}"></script>
+</head>
+<body>
+	<div class="reg-page flex">
+		<form>
+			<div class="logo">
+				<a href="/"><img src="{% static 'img/logo_with_text.png' %}"></a>
+			</div>
+			<div class="name">
+				Log In
+			</div>
+			<div class="top-text">
+				Not on Enolemumi yet? <a href="#">Sign up</a>
+			</div>
+			<label>Email</label>
+			<input type="text" placeholder="Field">
+			<label>Password</label>
+			<input type="password" placeholder="Password">
+			<button>Log In</button>
+			<div class="bottom-link">
+				<a href="#">Forgot password?</a>
+			</div>
+		</form>
+		<div class="image">
+
+		</div>
+	</div>
+</body>
+</html>

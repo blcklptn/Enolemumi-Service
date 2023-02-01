@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<link rel="stylesheet" href="{% static 'slick.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+	<script src="{% static 'js/common.js' %}"></script>
+</head>
+<body>
+	<div class="reg-page flex">
+		<div class="list">
+			<div class="logo">
+				<a href="/"><img src="{% static 'img/logo_with_text.png' %}"></a>
+			</div>
+			<div class="slider">
+				<div class="item">
+					<div class="content">
+						<span>Lorem Ipsum - это текст-"рыба".</span>
+						Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+					</div>
+				</div>
+				<div class="item">
+					<div class="content">
+						<span>Lorem Ipsum - это текст-"рыба".</span>
+						Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+					</div>
+				</div>
+				<div class="item">
+					<div class="content">
+						<span>Lorem Ipsum - это текст-"рыба".</span>
+						Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+					</div>
+				</div>
+				<div class="item">
+					<div class="content">
+						<span>Lorem Ipsum - это текст-"рыба".</span>
+						Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+					</div>
+				</div>
+			</div>
+		</div>
+		<form>
+			<div class="name">
+				Create your account
+			</div>
+			<div class="top-text">
+				Already have account on Enolemumi? <a href="#">Log in</a>
+			</div>
+			<label>Full name</label>
+			<input type="text" placeholder="Field">
+			<label>Email</label>
+			<input type="text" placeholder="Field">
+			<label>Password</label>
+			<input type="password" placeholder="Password">
+			<div class="bottom-text">
+				By clicking "Next" you agree to <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+			</div>
+			<button>Next</button>
+		</form>
+	</div>
+</body>
+</html>

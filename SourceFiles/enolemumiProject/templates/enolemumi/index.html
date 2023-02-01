@@ -1,0 +1,310 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<link rel="stylesheet" href="{% static 'slick.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+	<script src="{% static 'js/common.js' %}"></script>
+</head>
+<body>
+	<div class="menubg"></div>
+	<header class="header">
+		<div class="wrap flex">
+			<div class="logo">
+				<a href="/"><img src="{% static 'img/logo_with_text.png' %}"></a>
+			</div>
+			<ul>
+				<li><a href="#">All news</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Contact us</a></li>
+			</ul>
+			<div class="user-block">
+				<a href="/login"><i class="fa fa-user"></i> Sign in</a>
+				<button onclick="location.href = '/registration'">Get started free</button>
+			</div>
+			<a class="menu-button">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div>
+	</header>
+	<div class="index-page-slider">
+		<div class="item" style="background: #f5f6f8;">
+			<div class="wrap">
+				<div class="text">
+					<div class="name">
+						Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+					</div>
+					<p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+					<button>Try demo</button> <a href="#">More information</a>
+				</div>
+			</div>
+		</div>
+		<div class="item" style="background: #f5f6f8;">
+			<div class="wrap">
+				<div class="text">
+					<div class="name">
+						Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+					</div>
+					<p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+					<button>Try demo</button> <a href="#">More information</a>
+				</div>
+			</div>
+		</div>
+		<div class="item" style="background: #f5f6f8;">
+			<div class="wrap">
+				<div class="text">
+					<div class="name">
+						Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+					</div>
+					<p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+					<button>Try demo</button> <a href="#">More information</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="index-blocks">
+		<div class="wrap">
+			<div class="block-name">
+				Enolemumi is an assistant for any lawyers, regardless of his level.
+			</div>
+			<div class="item">
+				<div class="text">
+					<div class="name">
+						Convenient and flexible search.
+					</div>
+					<p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
+					<a href="#">Learn more</a>
+				</div>
+				<div class="image">
+					<img src="{% static 'img/image.png' %}">
+				</div>
+			</div>
+			<div class="item other">
+				<div class="image">
+					<img src="{% static 'img/image.png' %}">
+				</div>
+				<div class="text">
+					<div class="name">
+						Convenient and flexible search.
+					</div>
+					<p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+					<a href="#">Learn more</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="text">
+					<div class="name">
+						Convenient and flexible search.
+					</div>
+					<p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+					<a href="#">Learn more</a>
+				</div>
+				<div class="image">
+					<img src="{% static 'img/image.png' %}">
+				</div>
+			</div>
+			<div class="item other">
+				<div class="image">
+					<img src="{% static 'img/image.png' %}">
+				</div>
+				<div class="text">
+					<div class="name">
+						Convenient and flexible search.
+					</div>
+					<p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+					<a href="#">Learn more</a>
+				</div>
+			</div>
+			<div class="bottom-text">
+				<p>Not nonvincing enouth? The try the demo and see for yourself.</p>
+				<button>Try the  demo</button>
+			</div>
+		</div>
+	</div>
+	<div class="index-prices-block">
+		<div class="wrap">
+			<div class="block-name">
+				Find a plan that's right for you.
+			</div>
+			<div class="top-text">
+				Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+			</div>
+			<div class="flex">
+				<div class="item">
+					<div class="name">
+						<span>Basic</span>
+						Name
+					</div>
+					<ul>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+					</ul>
+					<div class="price">
+						<span>$6</span> per month
+					</div>
+					<div class="button">
+						<button>Buy package</button>
+					</div>
+				</div>
+				<div class="item">
+					<div class="name">
+						<span>Standart</span>
+						Name
+					</div>
+					<ul>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+					</ul>
+					<div class="price">
+						<span>$6</span> per month
+					</div>
+					<div class="button">
+						<button>Buy package</button>
+					</div>
+				</div>
+				<div class="item">
+					<div class="name">
+						<span>Premium</span>
+						Name
+					</div>
+					<ul>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+					</ul>
+					<div class="price">
+						<span>$6</span> per month
+					</div>
+					<div class="button">
+						<button>Buy package</button>
+					</div>
+				</div>
+				<div class="item">
+					<div class="name">
+						<span>Special</span>
+						Name
+					</div>
+					<ul>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+						<li><i class="fa fa-check-circle"></i> Advantage</li>
+					</ul>
+					<div class="price">
+						<span>$6</span> per month
+					</div>
+					<div class="button">
+						<button>Buy package</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="advantages-block">
+		<div class="wrap">
+			<div class="block-name">
+				What will you get after purchasing a subscription to Enolemumi?
+			</div>
+			<div class="flex">
+				<div class="item">
+					<i class="fa fa-thumbs-up"></i>
+					<span>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</span>
+					В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+				</div>
+				<div class="item">
+					<i class="fa fa-thumbs-up"></i>
+					<span>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</span>
+					В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+				</div>
+				<div class="item">
+					<i class="fa fa-thumbs-up"></i>
+					<span>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</span>
+					В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="index-bottom-block">
+		<div class="wrap">
+			<div class="text">
+				<div class="name">
+					Try the demo before you buy the demo before you buy.
+				</div>
+				<div class="image">
+					<img src="{% static 'img/phone.png' %}">
+				</div>
+				<p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+				<button onclick="location.href = '/registration'">Get started free</button>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="wrap flex">
+			<div class="data">
+				<div class="logo">
+					<a href="#"><img src="{% static 'img/logo.png' %}"></a>
+				</div>
+				<a href="#" class="link">mail@domain.ru</a>
+				<a href="#" class="link">+7 123 456-78-90</a>
+				<div class="adress">
+					Company adress
+				</div>
+				<div class="payment">
+					<img src="{% static 'img/payment.png' %}">
+				</div>
+			</div>
+			<nav>
+				<p>Title</p>
+				<ul>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+				</ul>
+			</nav>
+			<nav>
+				<p>Title</p>
+				<ul>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+				</ul>
+			</nav>
+			<nav>
+				<p>Title</p>
+				<ul>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+	<div class="copyright-block">
+		<div class="wrap">
+			&copy; Copyright text
+		</div>
+	</div>
+</body>
+</html>

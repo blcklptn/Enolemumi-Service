@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="slick.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+	window.onload = function () {
+
+	var options = {
+		animationEnabled: true,
+		title:{
+			text: "Stock Price of BMW - September"
+		},
+		axisX:{
+			valueFormatString: "DD MMM",
+			crosshair: {
+				enabled: true,
+				snapToDataPoint: true
+			}
+		},
+		axisY: {
+			title: "Closing Price (in USD)",
+			valueFormatString: "$##0.00",
+			crosshair: {
+				enabled: true,
+				snapToDataPoint: true,
+				labelFormatter: function(e) {
+					return "$" + CanvasJS.formatNumber(e.value, "##0.00");
+				}
+			}
+		},
+		data: [{
+			type: "area",
+			xValueFormatString: "DD MMM",
+			yValueFormatString: "$##0.00",
+			dataPoints: [
+				{ x: new Date(2017, 08, 01), y: 85.83 },
+
+				{ x: new Date(2017, 08, 04), y: 84.42 },
+				{ x: new Date(2017, 08, 05), y: 84.97 },
+				{ x: new Date(2017, 08, 06), y: 84.89 },
+				{ x: new Date(2017, 08, 07), y: 84.78 },
+				{ x: new Date(2017, 08, 08), y: 85.09 },
+				{ x: new Date(2017, 08, 09), y: 85.14 },
+
+				{ x: new Date(2017, 08, 11), y: 84.46 },
+				{ x: new Date(2017, 08, 12), y: 84.71 },
+				{ x: new Date(2017, 08, 13), y: 84.62 },
+				{ x: new Date(2017, 08, 14), y: 84.83 },
+				{ x: new Date(2017, 08, 15), y: 84.37 },
+				
+				{ x: new Date(2017, 08, 18), y: 84.07 },
+				{ x: new Date(2017, 08, 19), y: 83.60 },
+				{ x: new Date(2017, 08, 20), y: 82.85 },
+				{ x: new Date(2017, 08, 21), y: 82.52 },
+				
+				{ x: new Date(2017, 08, 25), y: 82.65 },
+				{ x: new Date(2017, 08, 26), y: 81.76 },
+				{ x: new Date(2017, 08, 27), y: 80.50 },
+				{ x: new Date(2017, 08, 28), y: 79.13 },
+				{ x: new Date(2017, 08, 29), y: 79.00 }
+			]
+		}]
+	};
+
+	$("#chartContainer").CanvasJSChart(options);
+
+	}
+	</script>
+</head>
+<body>
+	<div class="menubg"></div>
+	<header class="header">
+		<div class="wrap flex">
+			<div class="logo">
+				<a href="/"><img src="img/logo_with_text.png"></a>
+			</div>
+			<form>
+				<input type="text" placeholder="Search...">
+				<button><i class="fa fa-search"></i></button>
+			</form>
+			<div class="user">
+				<div><img src="img/avatar.jpg"></div>
+				<div>
+					<span>Nikita Lawyer</span>
+					Name name name
+				</div>
+				<i class="fa fa-angle-down"></i>
+				<a href="#"></a>
+			</div>
+			<a class="menu-button">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div>
+	</header>
+	<nav class="top-menu">
+		<div class="wrap">
+			<ul>
+				<li><a href="#" class="active">Home</a></li>
+				<li><a href="#">Statistics</a></li>
+				<li><a href="#">Tariff settings</a></li>
+				<li><a href="#">All users</a></li>
+				<li><a href="#">Chat</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="inner-page">
+		<div class="wrap flex">
+			<div class="cabinet-left-side">
+				<div class="tariffs-block">
+					<div class="block-name">
+						Main statistics
+					</div>
+					<div class="content">
+						<ul>
+							<li><a href="#" class="active">Nav 1</a></li>
+							<li><a href="#">Nav 2</a></li>
+						</ul>
+						<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+					</div>
+				</div>
+				<div class="tariffs-block">
+					<div class="block-name">
+						Tariffs statistics
+					</div>
+					<div class="content">
+						<ul>
+							<li><a href="#" class="active">Nav 1</a></li>
+							<li><a href="#">Nav 2</a></li>
+						</ul>
+						<div class="stats">
+							<div class="item">
+								<div class="result" style="width: 20%; background: #a7a8a8"></div>
+							</div>
+							<div class="item">
+								<div class="result" style="width: 16%; background: #3ec164"></div>
+							</div>
+							<div class="item">
+								<div class="result" style="width: 24%; background: #ff8e0e"></div>
+							</div>
+							<div class="item">
+								<div class="result" style="width: 28%; background: #8c4cfe"></div>
+							</div>
+							<div class="item">
+								<div class="result" style="width: 20%; background: #2173eb"></div>
+							</div>
+						</div>
+						<div class="names flex">
+							<div class="name">
+								<div><span style="background: #a7a8a8"></span></div>
+								<div>Basic</div>
+							</div>
+							<div class="name">
+								<div><span style="background: #3ec164"></span></div>
+								<div>Name</div>
+							</div>
+							<div class="name">
+								<div><span style="background: #ff8e0e"></span></div>
+								<div>Name</div>
+							</div>
+							<div class="name">
+								<div><span style="background: #8c4cfe"></span></div>
+								<div>Name</div>
+							</div>
+							<div class="name">
+								<div><span style="background: #2173eb"></span></div>
+								<div>Name</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="last-feedbacks-block">
+					<div class="block-name">
+						Last feedbacks
+					</div>
+					<div class="list">
+						<table>
+							<tr>
+								<td>
+									<div class="name">
+										<div><img src="img/avatar.jpg"></div>
+										<div>
+											<span>Nikita Lawyer</span>
+											Name name name
+										</div>
+									</div>
+								</td>
+								<td>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</td>
+								<td><button>Answer</button></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="name">
+										<div><img src="img/avatar.jpg"></div>
+										<div>
+											<span>Nikita Lawyer</span>
+											Name name name
+										</div>
+									</div>
+								</td>
+								<td>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</td>
+								<td><button>Answer</button></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="name">
+										<div><img src="img/avatar.jpg"></div>
+										<div>
+											<span>Nikita Lawyer</span>
+											Name name name
+										</div>
+									</div>
+								</td>
+								<td>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</td>
+								<td><button>Answer</button></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="name">
+										<div><img src="img/avatar.jpg"></div>
+										<div>
+											<span>Nikita Lawyer</span>
+											Name name name
+										</div>
+									</div>
+								</td>
+								<td>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</td>
+								<td><button>Answer</button></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="name">
+										<div><img src="img/avatar.jpg"></div>
+										<div>
+											<span>Nikita Lawyer</span>
+											Name name name
+										</div>
+									</div>
+								</td>
+								<td>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</td>
+								<td><button>Answer</button></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="name">
+										<div><img src="img/avatar.jpg"></div>
+										<div>
+											<span>Nikita Lawyer</span>
+											Name name name
+										</div>
+									</div>
+								</td>
+								<td>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</td>
+								<td><button>Answer</button></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="name">
+										<div><img src="img/avatar.jpg"></div>
+										<div>
+											<span>Nikita Lawyer</span>
+											Name name name
+										</div>
+									</div>
+								</td>
+								<td>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</td>
+								<td><button>Answer</button></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="name">
+										<div><img src="img/avatar.jpg"></div>
+										<div>
+											<span>Nikita Lawyer</span>
+											Name name name
+										</div>
+									</div>
+								</td>
+								<td>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</td>
+								<td><button>Answer</button></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="name">
+										<div><img src="img/avatar.jpg"></div>
+										<div>
+											<span>Nikita Lawyer</span>
+											Name name name
+										</div>
+									</div>
+								</td>
+								<td>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</td>
+								<td><button>Answer</button></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="name">
+										<div><img src="img/avatar.jpg"></div>
+										<div>
+											<span>Nikita Lawyer</span>
+											Name name name
+										</div>
+									</div>
+								</td>
+								<td>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</td>
+								<td><button>Answer</button></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="cabinet-right-side">
+				<div class="users-list-block">
+					<div class="block-name">
+						All Users
+					</div>
+					<form>
+						<div class="form">
+							<input type="text" placeholder="Search...">
+							<button><i class="fa fa-search"></i></button>
+						</div>
+					</form>
+					<ul>
+						<li><a href="#" class="active">Nav 1</a></li>
+						<li><a href="#">Nav 2</a></li>
+					</ul>
+					<div class="list">
+						<div class="item">
+							<div><img src="img/avatar.jpg"></div>
+							<div>
+								<span>Nikita Lawyer</span>
+								Name name name
+							</div>
+						</div>
+						<div class="item">
+							<div><img src="img/avatar.jpg"></div>
+							<div>
+								<span>Nikita Lawyer</span>
+								Name name name
+							</div>
+						</div>
+						<div class="item">
+							<div><img src="img/avatar.jpg"></div>
+							<div>
+								<span>Nikita Lawyer</span>
+								Name name name
+							</div>
+						</div>
+						<div class="item">
+							<div><img src="img/avatar.jpg"></div>
+							<div>
+								<span>Nikita Lawyer</span>
+								Name name name
+							</div>
+						</div>
+						<div class="item">
+							<div><img src="img/avatar.jpg"></div>
+							<div>
+								<span>Nikita Lawyer</span>
+								Name name name
+							</div>
+						</div>
+						<div class="item">
+							<div><img src="img/avatar.jpg"></div>
+							<div>
+								<span>Nikita Lawyer</span>
+								Name name name
+							</div>
+						</div>
+						<div class="item">
+							<div><img src="img/avatar.jpg"></div>
+							<div>
+								<span>Nikita Lawyer</span>
+								Name name name
+							</div>
+						</div>
+						<div class="item">
+							<div><img src="img/avatar.jpg"></div>
+							<div>
+								<span>Nikita Lawyer</span>
+								Name name name
+							</div>
+						</div>
+						<div class="item">
+							<div><img src="img/avatar.jpg"></div>
+							<div>
+								<span>Nikita Lawyer</span>
+								Name name name
+							</div>
+						</div>
+						<div class="item">
+							<div><img src="img/avatar.jpg"></div>
+							<div>
+								<span>Nikita Lawyer</span>
+								Name name name
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="profit-block">
+					<div class="block-name">
+						Profit
+					</div>
+					<div class="content">
+						<div class="profit">
+							$ 1.308
+						</div>
+						<p>Profit profit profit <span>+ 16%</span></p>
+					</div>
+				</div>
+				<div class="settings-block">
+					<div class="block-name">
+						Settings
+					</div>
+					<div class="content">
+						<div class="item">
+							Settings name <span>123</span>
+						</div>
+						<div class="item">
+							Settings name <span>+10%</span>
+						</div>
+						<div class="item">
+							Settings name <span>123</span>
+						</div>
+						<div class="item">
+							Settings name <span>+10%</span>
+						</div>
+						<div class="item">
+							Settings name <span>123</span>
+						</div>
+						<div class="item">
+							Settings name <span>+10%</span>
+						</div>
+						<div class="button">
+							<button>Button</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="wrap flex">
+			<div class="data">
+				<div class="logo">
+					<a href="#"><img src="img/logo.png"></a>
+				</div>
+				<a href="#" class="link">mail@domain.ru</a>
+				<a href="#" class="link">+7 123 456-78-90</a>
+				<div class="adress">
+					Company adress
+				</div>
+				<div class="payment">
+					<img src="img/payment.png">
+				</div>
+			</div>
+			<nav>
+				<p>Title</p>
+				<ul>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+				</ul>
+			</nav>
+			<nav>
+				<p>Title</p>
+				<ul>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+				</ul>
+			</nav>
+			<nav>
+				<p>Title</p>
+				<ul>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+					<li><a href="#">Nav link</a>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+	<div class="copyright-block">
+		<div class="wrap">
+			&copy; Copyright text
+		</div>
+	</div>
+	<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+	<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+</html>
