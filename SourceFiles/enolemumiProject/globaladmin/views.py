@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 def globaladminPage(request: object) -> render:
@@ -11,8 +11,12 @@ def globaladminPage(request: object) -> render:
 def globaladminStatistic(request: object) -> render:
     if request.session['email']:
         return render(request, 'enolemumi/Statistic.html', {'name': request.session['full_name'], 'email': request.session['email']})
+    else:
+        return redirect('')
 
 
 def userEdit(request: object) -> render:
     if request.session['email']:
         return render(request, 'enolemumi/UserEdit.html', {'name': request.session['full_name'], 'email': request.session['email']}) 
+    else:
+        return redirect('login')
