@@ -37,6 +37,25 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-static-precompiler"
+version = "2.4"
+description = "Django template tags to compile all kinds of static files"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "django-static-precompiler-2.4.tar.gz", hash = "sha256:22c983f4318f4ad96645d8b71af5c29d4525e55d0d5c3abe8917310280c7f89e"},
+    {file = "django_static_precompiler-2.4-py3-none-any.whl", hash = "sha256:5b67e951b19e1136f6bf00d879ae236435fe4be3e430369644743b1677645ce4"},
+]
+
+[package.dependencies]
+Django = ">=2.0"
+
+[package.extras]
+libsass = ["libsass"]
+watch = ["watchdog"]
+
+[[package]]
 name = "psycopg2-binary"
 version = "2.9.5"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
@@ -224,4 +243,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "8f7b92bce8459acaaf4fe7b0914646957f2df515563ee4cc19de315667319f48"
+content-hash = "8b7953a2979813844331dc066607f115888dbca80fc80db7c46bc785387c4f2b"
