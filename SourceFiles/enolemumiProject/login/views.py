@@ -12,7 +12,13 @@ def login(request: object) -> render:
         if userEx:
             user = MyUsers.objects.get(email=email)
             if password == user.password:
-                print('Login!')
+                role = user.role
+                if role == 'Администратор':
+                    pass
+                elif role == 'Пользователь':
+                    pass
+                
+                print(f'Login! as {role}')
                 return redirect('/')
             else:
                 return render(request, 'enolemumi/login.html')
