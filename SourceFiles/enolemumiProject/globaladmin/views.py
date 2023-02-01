@@ -20,3 +20,10 @@ def userEdit(request: object) -> render:
         return render(request, 'enolemumi/UserEdit.html', {'name': request.session['full_name'], 'email': request.session['email']}) 
     else:
         return redirect('login')
+
+def logout(request: object) -> render:
+    if request.session['email']:
+        del request.session['email']
+        del request.session['full_name']
+        return redirect('login')
+    return redirect('login')

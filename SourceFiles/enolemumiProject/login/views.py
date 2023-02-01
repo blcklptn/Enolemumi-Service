@@ -3,9 +3,6 @@ from registration.models import MyUsers
 
 # Create your views here.
 def login(request: object) -> render:
-    if request.session['email']:
-        return redirect('/globaladmin')
-
     if request.method == 'POST':
         email = request.POST['email']
         password = request.POST['password']
