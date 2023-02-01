@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="slick.css">
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<link rel="stylesheet" href="{% static 'slick.css' %}">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="js/slick.min.js"></script>
-	<script src="js/common.js"></script>
+	<script type="text/javascript" src="{% static 'js/slick.min.jss' %}"></script>
+	<script src="{% static 'js/common.js' %}"></script>
 	<script>
 	window.onload = function () {
 
@@ -79,16 +80,16 @@
 	<header class="header">
 		<div class="wrap flex">
 			<div class="logo">
-				<a href="/"><img src="img/logo_with_text.png"></a>
+				<a href="/"><img src="{% static 'img/logo_with_text.png' %}"></a>
 			</div>
 			<form>
 				<input type="text" placeholder="Search...">
 				<button><i class="fa fa-search"></i></button>
 			</form>
 			<div class="user">
-				<div><img src="img/avatar.jpg"></div>
+				<div><img src="{% static 'img/avatar.jpg' %}"></div>
 				<div>
-					<span>Nikita Lawyer</span>
+					<span>{{ name }}</span>
 					Name name name
 				</div>
 				<i class="fa fa-angle-down"></i>
@@ -104,8 +105,8 @@
 	<nav class="top-menu">
 		<div class="wrap">
 			<ul>
-				<li><a href="#" class="active">Home</a></li>
-				<li><a href="#">Statistics</a></li>
+				<li><a href="/globaladmin">Home</a></li>
+				<li><a href="#" class="active" >Statistics</a></li>
 				<li><a href="#">Tariff settings</a></li>
 				<li><a href="#">All users</a></li>
 				<li><a href="#">Chat</a></li>
@@ -362,7 +363,7 @@
 		<div class="wrap flex">
 			<div class="data">
 				<div class="logo">
-					<a href="#"><img src="img/logo.png"></a>
+					<a href="#"><img src="{% static 'img/logo.png' %}"></a>
 				</div>
 				<a href="#" class="link">mail@domain.ru</a>
 				<a href="#" class="link">+7 123 456-78-90</a>
@@ -370,7 +371,7 @@
 					Company adress
 				</div>
 				<div class="payment">
-					<img src="img/payment.png">
+					<img src="{% static 'img/payment.png' %}">
 				</div>
 			</div>
 			<nav>

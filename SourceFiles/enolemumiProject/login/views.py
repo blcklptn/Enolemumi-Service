@@ -14,7 +14,10 @@ def login(request: object) -> render:
             if password == user.password:
                 role = user.role
                 if role == 'Администратор':
-                    pass
+                    print(request.session.session_key)
+                    request.session['email'] = user.email
+                    request.session['full_name'] = user.fullName
+                    return redirect('/globaladmin')
                 elif role == 'Пользователь':
                     pass
                 
