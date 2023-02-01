@@ -13,7 +13,9 @@
 </head>
 <body>
 	<div class="reg-page flex">
-		<form>
+		<form method="POST" action="">
+			{% csrf_token %}
+
 			<div class="logo">
 				<a href="/"><img src="{% static 'img/logo_with_text.png' %}"></a>
 			</div>
@@ -24,9 +26,9 @@
 				Not on Enolemumi yet? <a href="#">Sign up</a>
 			</div>
 			<label>Email</label>
-			<input type="text" placeholder="Field">
+			<input type="text" placeholder="Field" name="email">
 			<label>Password</label>
-			<input type="password" placeholder="Password">
+			<input type="password" placeholder="Password" name="password">
 			<button>Log In</button>
 			<div class="bottom-link">
 				<a href="#">Forgot password?</a>

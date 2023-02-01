@@ -1,5 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 def login(request: object) -> render:
-    return render(request, 'enolemumi/login.html')
+    print('qweqwe')
+    if request.method == 'POST':
+        print('autheficated')
+        return redirect('/')
+    else:
+        return render(request, 'enolemumi/login.html')

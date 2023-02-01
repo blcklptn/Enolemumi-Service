@@ -1,5 +1,7 @@
 {% load static %}
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +47,8 @@
 				</div>
 			</div>
 		</div>
-		<form>
+		<form method="post" action="registration">
+			{% csrf_token %}
 			<div class="name">
 				Create your account
 			</div>
@@ -53,11 +56,11 @@
 				Already have account on Enolemumi? <a href="#">Log in</a>
 			</div>
 			<label>Full name</label>
-			<input type="text" placeholder="Field">
+			<input type="text" placeholder="Field" name="full_name">
 			<label>Email</label>
-			<input type="text" placeholder="Field">
+			<input type="text" placeholder="Field" name="email">
 			<label>Password</label>
-			<input type="password" placeholder="Password">
+			<input type="password" placeholder="Password" name="password">
 			<div class="bottom-text">
 				By clicking "Next" you agree to <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
 			</div>

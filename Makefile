@@ -7,5 +7,8 @@ startBackend:
 migrate:
 	poetry run python3 SourceFiles/enolemumiProject/manage.py migrate
 
+makemigrate:
+	poetry run python3 SourceFiles/enolemumiProject/manage.py makemigrations
+
 installReq:
 	poetry install --sync
