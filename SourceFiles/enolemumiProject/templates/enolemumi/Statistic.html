@@ -89,11 +89,11 @@
 			<div class="user">
 				<div><img src="{% static 'img/avatar.jpg' %}"></div>
 				<div>
-					<span>{{ name }}</span>
-					Name name name
+					<span>{{ email }}</span>
+					{{ name }}
 				</div>
 				<i class="fa fa-angle-down"></i>
-				<a href="#"></a>
+				<a href="/userEdit"></a>
 			</div>
 			<a class="menu-button">
 				<span></span>
@@ -106,7 +106,7 @@
 		<div class="wrap">
 			<ul>
 				<li><a href="/globaladmin">Home</a></li>
-				<li><a href="#" class="active" >Statistics</a></li>
+				<li><a href="/globaladmin_statistic" class="active" >Statistics</a></li>
 				<li><a href="#">Tariff settings</a></li>
 				<li><a href="#">All users</a></li>
 				<li><a href="#">Chat</a></li>
