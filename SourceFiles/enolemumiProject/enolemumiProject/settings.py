@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITES = {
+    'ptac_gov': 'https://registri.ptac.gov.lv/lv/table/ptac-l-mumi'
+}
 
 # Application definition
 
@@ -38,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'public',
-    'registration'
+    'registration',
+    'globaladmin',
+    'login'
 ]
 
 MIDDLEWARE = [

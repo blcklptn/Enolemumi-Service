@@ -122,24 +122,24 @@
 					</div>
 					<div class="content">
 						<div class="item">
-							Status
-							<span class="green">Status status status status</span>
+							Parser status
+							<span class="green">{{ parser_status }}</span>
 						</div>
 						<div class="item">
-							Status
-							<span>Status status status status</span>
+							Last run
+							<span>{{ parser_last_run }}</span>
 						</div>
 						<div class="item">
-							Status
-							<span>Status status status status</span>
+							Last document
+							<span>{{ parser_last_document }}</span>
 						</div>
 						<div class="item">
-							Status
-							<span class="red">Status <i>status</i></span>
+							Percent of errors
+							<span class="red">12<i>{{ parser_percent_of_errors }}</i></span>
 						</div>
 						<div class="item">
-							Status
-							<span>Status status status status</span>
+							Parsed site
+							<span>{{ parser_site }}</span>
 						</div>
 					</div>
 				</div>
@@ -156,10 +156,7 @@
 							<button><i class="fa fa-plus"></i></button>
 						</form>
 						<div class="item">
-							http://site.ru <a class="delete"><i class="fa fa-plus"></i></a>
-						</div>
-						<div class="item">
-							http://site.ru <a class="delete"><i class="fa fa-plus"></i></a>
+							{{ sites }} <a class="delete"><i class="fa fa-plus"></i></a>
 						</div>
 						<div class="option">
 							<input type="checkbox" class="checkbox" id="ch1"><label for="ch1">Option</label>
@@ -210,16 +207,16 @@
 					</div>
 					<div class="flex">
 						<div class="item">
-							<span>10</span>
-							Lorem Ipsum - это текст-"рыба.
+							<span>{{ count_of_cases }}</span>
+							Count of all cases
 						</div>
 						<div class="item">
-							<span>20</span>
-							Lorem Ipsum - это текст-"рыба.
+							<span>{{ count_of_new_cases }}</span>
+							Count of new cases
 						</div>
 						<div class="item">
-							<span>30</span>
-							Lorem Ipsum - это текст-"рыба.
+							<span>{{ average_count_of_cases }}</span>
+							Average count of cases
 						</div>
 					</div>
 				</div>
@@ -233,6 +230,28 @@
 						<li><a href="#">Nav item 3</a></li>
 					</ul>
 					<div class="content">
+						{% csrf_token %}
+						<script>
+							function sendToBack() {
+								var $crf_token = $('[name="csrfmiddlewaretoken"]').attr('value');
+								let words = document.getElementById('words').value
+								let category = document.getElementById('category').value
+								let data_l = {'words': words, 'category': category}
+								$.ajax({
+									type: "POST",
+									url: "/startParse",
+									data: data_l,
+									headers:{"X-CSRFToken": $crf_token},
+									success: function (newEnd) {
+										console.log(newEnd);
+										add_end(newEnd);
+									},
+									error: function () {
+										alert("There was an error")
+									}
+								});
+							}
+						</script>
 						<div class="name">
 							New
 						</div>
@@ -240,26 +259,15 @@
 							Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
 						</div>
 						<form>
-							<input type="text" placeholder="Enter name of category">
+							<input id='category' type="text" placeholder="Enter name of category" name="category">
 						</form>
-						<form>
-							<input type="text" placeholder="Enter new word">
+						<form method="post" action="/startParse">
+							<input id = 'words' type="text" placeholder="Enter new word" name="words">
 							<button><i class="fa fa-plus"></i></button>
 						</form>
-						<div class="list">
-							<div class="item">
-								10 categories <a><i class="fa fa-plus"></i></a>
-							</div>
-							<div class="item">
-								10 categories <a><i class="fa fa-plus"></i></a>
-							</div>
-							<div class="item">
-								10 categories <a><i class="fa fa-plus"></i></a>
-							</div>
-						</div>
 						<div class="buttons flex">
 							<button>Button</button>
-							<button>Button</button>
+							<button onclick="sendToBack()">Button</button>
 						</div>
 					</div>
 				</div>
